@@ -26,89 +26,206 @@ public class FFGUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jlProgram = new javax.swing.JLabel();
-        jtProgramPath = new javax.swing.JTextField();
+        jlTitle = new javax.swing.JLabel();
         jlEntrance = new javax.swing.JLabel();
         jtEntrancePath = new javax.swing.JTextField();
         jlExit = new javax.swing.JLabel();
-        jtExitPath = new javax.swing.JTextField();
+        jtExitName = new javax.swing.JTextField();
         convert = new javax.swing.JButton();
         jcbFormatSelect = new javax.swing.JComboBox<>();
         jlFormat = new javax.swing.JLabel();
+        jlText1 = new javax.swing.JLabel();
+        jlText2 = new javax.swing.JLabel();
+        jlProgram = new javax.swing.JLabel();
+        jtProgramPath = new javax.swing.JTextField();
+        jlRotate = new javax.swing.JLabel();
+        jcbRotateSelect = new javax.swing.JComboBox<>();
+        jlScreen = new javax.swing.JLabel();
+        jcbScreenSelect = new javax.swing.JComboBox<>();
+        rotate = new javax.swing.JButton();
+        screen = new javax.swing.JButton();
+        reset = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jlProgram.setText("Introduce la ruta del programa:");
+        jlTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jlTitle.setIcon(new javax.swing.ImageIcon("C:\\Users\\claud\\Documents\\NetBeansProjects\\ws_disenio_interfaces\\practice3\\FFmpeg\\img\\FFmpeg_Logosmall.png")); // NOI18N
 
-        jlEntrance.setText("Introduce la ruta del video de origen:");
+        jlEntrance.setText("Introduce la ruta del video que quieres convertir:");
 
-        jlExit.setText("Introduce la ruta y nombre del video de salida:");
+        jtEntrancePath.setText("C:\\");
 
-        convert.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        convert.setText("Convertir");
-        convert.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                convertActionPerformed(evt);
-            }
-        });
+            jlExit.setText("Introduce el nombre del video de salida:");
 
-        jcbFormatSelect.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "avi", "mp4", "mkv", "mov", "mpeg" }));
+            jtExitName.addActionListener(new java.awt.event.ActionListener() {
+                public void actionPerformed(java.awt.event.ActionEvent evt) {
+                    jtExitNameActionPerformed(evt);
+                }
+            });
 
-        jlFormat.setText("Selecciona el formato de salida del video:");
+            convert.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+            convert.setText("Convertir formato");
+            convert.addActionListener(new java.awt.event.ActionListener() {
+                public void actionPerformed(java.awt.event.ActionEvent evt) {
+                    convertActionPerformed(evt);
+                }
+            });
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jtEntrancePath)
-                    .addComponent(jlExit, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jlEntrance, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jlProgram, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jtExitPath)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jlFormat, javax.swing.GroupLayout.DEFAULT_SIZE, 247, Short.MAX_VALUE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jcbFormatSelect, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jtProgramPath))
-                .addContainerGap())
-            .addGroup(layout.createSequentialGroup()
-                .addGap(158, 158, 158)
-                .addComponent(convert)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jlProgram)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jtProgramPath, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jlEntrance)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jtEntrancePath, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jlExit)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jtExitPath, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jcbFormatSelect, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jlFormat))
-                .addGap(38, 38, 38)
-                .addComponent(convert)
-                .addContainerGap(85, Short.MAX_VALUE))
-        );
+            jcbFormatSelect.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "avi", "mp4", "mkv", "mov", "mpeg" }));
 
-        pack();
-    }// </editor-fold>//GEN-END:initComponents
+            jlFormat.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+            jlFormat.setText("Selecciona el formato de salida del video:");
+
+            jlText1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+            jlText1.setText("Con esta herramienta podrás convertir entre formatos de video,");
+
+            jlText2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+            jlText2.setText("rotar y reducir resolución.");
+
+            jlProgram.setText("Introduce la ruta de la aplicación FFmpeg:");
+
+            jtProgramPath.setText("C:\\ffmpeg\\bin\\ffmpeg.exe");
+
+            jlRotate.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+            jlRotate.setText("Rotar imagen:");
+
+            jcbRotateSelect.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "┘ rotar izquierda", "└ rotar derecha" }));
+
+            jlScreen.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+            jlScreen.setText("Cambiar resolución:");
+
+            jcbScreenSelect.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1280x720 (720p)", "640x480 (4:3)", "720x480 (DVD)" }));
+
+            rotate.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+            rotate.setText("Rotar imagen");
+            rotate.addActionListener(new java.awt.event.ActionListener() {
+                public void actionPerformed(java.awt.event.ActionEvent evt) {
+                    rotateActionPerformed(evt);
+                }
+            });
+
+            screen.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+            screen.setText("Cambiar resolución");
+            screen.addActionListener(new java.awt.event.ActionListener() {
+                public void actionPerformed(java.awt.event.ActionEvent evt) {
+                    screenActionPerformed(evt);
+                }
+            });
+
+            reset.setText("Limpiar campos");
+            reset.addActionListener(new java.awt.event.ActionListener() {
+                public void actionPerformed(java.awt.event.ActionEvent evt) {
+                    resetActionPerformed(evt);
+                }
+            });
+
+            javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+            getContentPane().setLayout(layout);
+            layout.setHorizontalGroup(
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jlText2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jlText1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jlTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jtEntrancePath)
+                        .addComponent(jlExit, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jlEntrance, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jtExitName)
+                        .addComponent(jlProgram, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jtProgramPath)
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(jlScreen, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(jcbScreenSelect, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jlRotate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jlFormat, javax.swing.GroupLayout.DEFAULT_SIZE, 247, Short.MAX_VALUE))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jcbFormatSelect, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jcbRotateSelect, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                            .addGap(0, 0, Short.MAX_VALUE)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                    .addComponent(convert)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(rotate)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(screen))
+                                .addComponent(reset, javax.swing.GroupLayout.Alignment.TRAILING))))
+                    .addContainerGap())
+            );
+            layout.setVerticalGroup(
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(17, 17, 17)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(jlTitle)
+                            .addGap(12, 12, 12)
+                            .addComponent(jlText1)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(jlText2)
+                            .addGap(18, 18, 18)
+                            .addComponent(jlProgram)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(jtProgramPath, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(jlEntrance)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(jtEntrancePath, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(jlExit)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(jtExitName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(jlFormat)
+                                .addComponent(jcbFormatSelect, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(jcbRotateSelect, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jlRotate))
+                            .addGap(34, 34, 34))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jcbScreenSelect, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jlScreen, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 72, Short.MAX_VALUE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(convert)
+                        .addComponent(rotate)
+                        .addComponent(screen))
+                    .addGap(40, 40, 40)
+                    .addComponent(reset)
+                    .addGap(15, 15, 15))
+            );
+
+            pack();
+        }// </editor-fold>//GEN-END:initComponents
 
     private void convertActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_convertActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_convertActionPerformed
+
+    private void jtExitNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtExitNameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtExitNameActionPerformed
+
+    private void screenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_screenActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_screenActionPerformed
+
+    private void resetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_resetActionPerformed
+
+    private void rotateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rotateActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_rotateActionPerformed
 
     /**
      * @param args the command line arguments
@@ -148,12 +265,22 @@ public class FFGUI extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton convert;
     private javax.swing.JComboBox<String> jcbFormatSelect;
+    private javax.swing.JComboBox<String> jcbRotateSelect;
+    private javax.swing.JComboBox<String> jcbScreenSelect;
     private javax.swing.JLabel jlEntrance;
     private javax.swing.JLabel jlExit;
     private javax.swing.JLabel jlFormat;
     private javax.swing.JLabel jlProgram;
+    private javax.swing.JLabel jlRotate;
+    private javax.swing.JLabel jlScreen;
+    private javax.swing.JLabel jlText1;
+    private javax.swing.JLabel jlText2;
+    private javax.swing.JLabel jlTitle;
     private javax.swing.JTextField jtEntrancePath;
-    private javax.swing.JTextField jtExitPath;
+    private javax.swing.JTextField jtExitName;
     private javax.swing.JTextField jtProgramPath;
+    private javax.swing.JButton reset;
+    private javax.swing.JButton rotate;
+    private javax.swing.JButton screen;
     // End of variables declaration//GEN-END:variables
 }
